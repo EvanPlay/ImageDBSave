@@ -1,0 +1,38 @@
+﻿<Window x:Class="ImageDBSave.MessageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ImageDBSave"
+        mc:Ignorable="d"
+        Title="MessageWindow" Height="450" Width="500"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Margin="20" Padding="0" FontSize="20" HorizontalAlignment="Center">Внимание!</Label>
+            <Label Padding="0" FontSize="15" HorizontalAlignment="Center">Данное приложение находится в Alpha версии.</Label>
+            <Label Padding="0" FontSize="15" HorizontalAlignment="Center">Множество функций находятся в неактивном состоянии.</Label>
+
+            <FlowDocumentScrollViewer Margin="10">
+                <FlowDocument>
+                    <List>
+                        <ListItem>
+                            <Paragraph FontSize="14">Загрузка файлов в приложение - отсутсвует</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph FontSize="14">Загрузка файлов в Базу Данных - отсутсвует</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph FontSize="14">Просмотр файлов, находящихся в Базе Данных - отсутсвует</Paragraph>
+                        </ListItem>
+                    </List>
+                </FlowDocument>
+            </FlowDocumentScrollViewer>
+
+            <Button Name="btClose" Click="btClose_Click" Margin="20" Padding="5" FontSize="15" Width="130" ToolTip="Нажмая на данную кнопку вы подтврждаете, что ознакомились с предоставленной в данном окне информацией." Content="Хорошо"/>
+        </StackPanel>
+
+        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Right" Text="ver 0.0.1"/>
+    </Grid>
+</Window>
