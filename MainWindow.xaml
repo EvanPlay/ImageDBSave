@@ -8,8 +8,11 @@
         Title="MainWindow" Height="550" Width="900"
         WindowStartupLocation="CenterScreen">
     <Grid>
-
-
+        <StackPanel>
+            <TextBlock Text="Кошка белага по крыше." Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="pack://application:,,,/MySource/#Ponter"/>
+            <TextBlock Text="Cat runing top of the rue." Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="{StaticResource myFont}"/>
+        </StackPanel>
+        
         <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Right" Text="ver 0.0.1"/>
     </Grid>
 </Window>

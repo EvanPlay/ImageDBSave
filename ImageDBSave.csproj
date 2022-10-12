@@ -7,4 +7,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="MySource\13748.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="MySource\13748.ttf" />
+  </ItemGroup>
+
 </Project>
