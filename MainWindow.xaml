@@ -8,11 +8,26 @@
         Title="MainWindow" Height="550" Width="900"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <StackPanel>
-            <TextBlock Text="Кошка белага по крыше." Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="pack://application:,,,/MySource/#Ponter"/>
-            <TextBlock Text="Cat runing top of the rue." Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="{StaticResource myFont}"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Background="#FFFDF1E9" Grid.Column="1" Margin="10" BorderThickness="5" BorderBrush="#303030">
+        <StackPanel 
+                    VerticalAlignment="Center" HorizontalAlignment="Center">
+
+                <Image Name="UserImage" Margin="10" Source="TestSource\587bcd241466d.jpg"/>
+
         </StackPanel>
-        
-        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Right" Text="ver 0.0.1"/>
+        </Border>
+
+        <StackPanel Grid.Column="0" Margin="10">
+            <TextBox Name="tbImageName" Margin="10"/>
+            <Button Name="btImageLoaded" Margin="7" Content="Загрузить" ToolTip="Нажмите, для загрузки изображения в базу данных."/>
+            <Button Name="btImaegSearch" Margin="7" Content="Просмотр" ToolTip="Нажмите, для просмотра изображений из базы данных."/>
+        </StackPanel>
+
+        <TextBlock Style="{StaticResource Version}"/>
     </Grid>
 </Window>

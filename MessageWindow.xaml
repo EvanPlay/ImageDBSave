@@ -33,6 +33,6 @@
             <Button Name="btClose" Click="btClose_Click" Margin="20" Padding="5" FontSize="15" Width="130" ToolTip="Нажмая на данную кнопку вы подтврждаете, что ознакомились с предоставленной в данном окне информацией." Content="Хорошо"/>
         </StackPanel>
 
-        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Right" Text="ver 0.0.1"/>
+        <TextBlock Style="{StaticResource Version}"/>
     </Grid>
 </Window>
