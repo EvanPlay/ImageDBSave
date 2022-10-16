@@ -5,9 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ImageDBSave"
         mc:Ignorable="d"
-        Title="Окно приложения" Height="550" Width="900"
-        WindowStartupLocation="CenterScreen"
-        Closing="AplicationClose">
+        Title="MainWindow" Height="550" Width="900"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -15,7 +14,8 @@
         </Grid.ColumnDefinitions>
 
         <Border Background="#FFFDF1E9" Grid.Column="1" Margin="10" BorderThickness="5" BorderBrush="#303030">
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel 
+                    VerticalAlignment="Center" HorizontalAlignment="Center">
 
                 <Image Name="UserImage" Margin="10" Source="TestSource\587bcd241466d.jpg"/>
 
@@ -23,13 +23,7 @@
         </Border>
 
         <StackPanel Grid.Column="0" Margin="10">
-            <!--<Label Content="Имя пользователя" Padding="1"/>-->
-            <Label Content="Имя файла" Padding="1"/>
             <TextBox Name="tbImageName" Margin="10"/>
-            <CheckBox Name="cbIncogniton" Margin="5" Content="Сохранино инкогнито" ToolTip="Поставьте галочку для сохранея изображения в базе данных, без упоминания автора загрузки."
-                      Unchecked="cbIncogniton_Unchecked"
-                      Checked="cbIncogniton_Checked"
-                      Indeterminate="cbIncogniton_Indeterminate"/>
             <Button Name="btImageLoaded" Margin="7" Content="Загрузить" ToolTip="Нажмите, для загрузки изображения в базу данных."/>
             <Button Name="btImaegSearch" Margin="7" Content="Просмотр" ToolTip="Нажмите, для просмотра изображений из базы данных."/>
         </StackPanel>
