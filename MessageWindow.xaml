@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="Сообщение" Height="450" Width="500"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        Topmost="True">
     <Grid>
         <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Label Margin="20" Padding="0" FontSize="20" HorizontalAlignment="Center">Внимание!</Label>

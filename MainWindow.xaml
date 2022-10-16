@@ -14,10 +14,10 @@
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
 
-        <Border Background="#FFFDF1E9" Grid.Column="1" Margin="10" BorderThickness="5" BorderBrush="#303030">
+        <Border Grid.Column="1" Margin="10" BorderThickness="5" BorderBrush="#303030">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
 
-                <Image Name="UserImage" Margin="10" Source="TestSource\587bcd241466d.jpg"/>
+                <Image Name="UserImage" Source="TestSource\587bcd241466d.jpg"/>
 
         </StackPanel>
         </Border>

@@ -21,16 +21,17 @@ namespace ImageDBSave
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(string UserStatus)
         {
             InitializeComponent();
-            this.Loaded += MainWindow_Loaded;
-        }
-
-        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-            MessageWindow messageWindow = new MessageWindow();
-            messageWindow.Show();
+            if(UserStatus == "UnName")
+            {
+                cbIncogniton.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                cbIncogniton.Visibility = Visibility.Visible;
+            }
         }
 
         private void cbIncogniton_Unchecked(object sender, RoutedEventArgs e)
