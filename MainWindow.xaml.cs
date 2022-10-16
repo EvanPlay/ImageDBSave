@@ -46,7 +46,17 @@ namespace ImageDBSave
         {
             MessageBox.Show("Неизвестная ошибка. Мы не можем понять, как вы умудрились ответить на вопрос \"да или нет\" - \"да, нет\".");
         }
-        
+
+        private void btImageLoaded_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Функция находится в разработке.");
+        }
+
+        private void btImaegSearch_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Функция находится в разработке.");
+        }
+
         private void AplicationClose(object sender, CancelEventArgs e)
         {
             if(MessageBox.Show("Вы уверены, что хотите закрыть прилоежние?", "Закрыть приложение?", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)

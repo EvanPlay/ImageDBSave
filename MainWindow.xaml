@@ -30,8 +30,8 @@
                       Unchecked="cbIncogniton_Unchecked"
                       Checked="cbIncogniton_Checked"
                       Indeterminate="cbIncogniton_Indeterminate"/>
-            <Button Name="btImageLoaded" Margin="7" Content="Загрузить" ToolTip="Нажмите, для загрузки изображения в базу данных."/>
-            <Button Name="btImaegSearch" Margin="7" Content="Просмотр" ToolTip="Нажмите, для просмотра изображений из базы данных."/>
+            <Button Name="btImageLoaded" Click="btImageLoaded_Click" Margin="7" Content="Загрузить" ToolTip="Нажмите, для загрузки изображения в базу данных."/>
+            <Button Name="btImaegSearch" Click="btImaegSearch_Click" Margin="7" Content="Просмотр" ToolTip="Нажмите, для просмотра изображений из базы данных."/>
         </StackPanel>
 
         <TextBlock Style="{StaticResource Version}"/>
