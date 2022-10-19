@@ -5,27 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ImageDBSave"
         mc:Ignorable="d"
+
+        Title="Окно приложения" Height="550" Width="900"
+        WindowStartupLocation="CenterScreen">
+    <!--Closing="AplicationClose"-->
+        
+
         Title="MainWindow" Height="550" Width="900"
         WindowStartupLocation="CenterScreen">
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
 
+        <Border Grid.Column="1" Margin="10" BorderThickness="5" BorderBrush="#303030">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+
         <Border Background="#FFFDF1E9" Grid.Column="1" Margin="10" BorderThickness="5" BorderBrush="#303030">
         <StackPanel 
                     VerticalAlignment="Center" HorizontalAlignment="Center">
 
-                <Image Name="UserImage" Margin="10" Source="TestSource\587bcd241466d.jpg"/>
+
+                <Image Name="UserImage" Source="TestSource\587bcd241466d.jpg"/>
 
         </StackPanel>
         </Border>
 
         <StackPanel Grid.Column="0" Margin="10">
             <TextBox Name="tbImageName" Margin="10"/>
+
+            <CheckBox Name="cbIncogniton" Margin="5" Content="Сохранино инкогнито" ToolTip="Поставьте галочку для сохранея изображения в базе данных, без упоминания автора загрузки."
+                      Unchecked="cbIncogniton_Unchecked"
+                      Checked="cbIncogniton_Checked"
+                      Indeterminate="cbIncogniton_Indeterminate"/>
+            <Button Name="btEnter" Click="btEnter_Click" Margin="7" Content="Войти" ToolTip="Нажмите, для входа в систему и выхода из режима инкогнито."/>
+            <Button Name="btImageLoaded" Click="btImageLoaded_Click" Margin="7" Content="Загрузить" ToolTip="Нажмите, для загрузки изображения в базу данных."/>
+            <Button Name="btImaegSearch" Click="btImaegSearch_Click" Margin="7" Content="Просмотр" ToolTip="Нажмите, для просмотра изображений из базы данных."/>
+
             <Button Name="btImageLoaded" Margin="7" Content="Загрузить" ToolTip="Нажмите, для загрузки изображения в базу данных."/>
             <Button Name="btImaegSearch" Margin="7" Content="Просмотр" ToolTip="Нажмите, для просмотра изображений из базы данных."/>
+
         </StackPanel>
 
         <TextBlock Style="{StaticResource Version}"/>

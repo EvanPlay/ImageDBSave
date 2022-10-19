@@ -5,15 +5,28 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>MySource\ImageDB.ico</ApplicationIcon>
+    <PackageIcon>ImageDB.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="MySource\13748.ttf" />
+    <None Remove="MySource\ImageDB.ico" />
     <None Remove="TestSource\587bcd241466d.jpg" />
     <None Remove="TestSource\Красная_стрелка_вниз.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="MySource\ImageDB.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="MySource\ImageDB.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="MySource\ImageDB.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="TestSource\Красная_стрелка_вниз.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -24,6 +37,13 @@
     <Resource Include="TestSource\587bcd241466d.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="MySource\ImageDB.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MessageWindow" Height="450" Width="500"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        Topmost="True">
     <Grid>
         <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Label Margin="20" Padding="0" FontSize="20" HorizontalAlignment="Center">Внимание!</Label>
@@ -25,6 +26,13 @@
                         </ListItem>
                         <ListItem>
                             <Paragraph FontSize="14">Просмотр файлов, находящихся в Базе Данных - отсутсвует</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph FontSize="14">
+                                <Hyperlink NavigateUri="UpdatesWindow.xaml"
+                                           Click="Hyperlink_Click">Обновления</Hyperlink> версии:
+                                <TextBlock Margin="0" Style="{StaticResource Version}"/>
+                            </Paragraph>
                         </ListItem>
                     </List>
                 </FlowDocument>

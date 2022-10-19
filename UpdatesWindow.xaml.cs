@@ -15,25 +15,25 @@ using System.Windows.Shapes;
 namespace ImageDBSave
 {
     /// <summary>
-    /// Логика взаимодействия для MessageWindow.xaml
+    /// Логика взаимодействия для UpdatesWindow.xaml
     /// </summary>
-    public partial class MessageWindow : Window
+    public partial class UpdatesWindow : Window
     {
-        public MessageWindow()
+        public UpdatesWindow()
         {
             InitializeComponent();
         }
 
-        private void btClose_Click(object sender, RoutedEventArgs e)
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            this.Close();
+            MessageWindow messageWindow = new();
+            messageWindow.Show();
         }
 
-        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        private void btBack_Click(object sender, RoutedEventArgs e)
         {
-            UpdatesWindow updatesWindow = new();
-            updatesWindow.Show();
-            Close();
+            MessageWindow messageWindow = new();
+            messageWindow.Show();
         }
     }
 }
