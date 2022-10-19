@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +34,7 @@ namespace ImageDBSave
                 btEnter.Visibility = Visibility.Collapsed;
             }
         }
+
 
         private void cbIncogniton_Unchecked(object sender, RoutedEventArgs e)
         {

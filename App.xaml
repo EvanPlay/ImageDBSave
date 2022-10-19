@@ -9,7 +9,11 @@
         <FontFamily x:Key="myFont">pack://application:,,,/MySource/#Ponter</FontFamily>
 
         <Style x:Key="Version" TargetType="TextBlock">
+
             <Setter Property="Text" Value="Ver 0.0.8"/>
+
+            <Setter Property="Text" Value="Ver 0.0.2"/>
+
             <Setter Property="Margin" Value="5"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Bottom"/>
