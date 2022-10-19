@@ -6,8 +6,9 @@
         xmlns:local="clr-namespace:ImageDBSave"
         mc:Ignorable="d"
         Title="Окно приложения" Height="550" Width="900"
-        WindowStartupLocation="CenterScreen"
-        Closing="AplicationClose">
+        WindowStartupLocation="CenterScreen">
+    <!--Closing="AplicationClose"-->
+        
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -30,6 +31,7 @@
                       Unchecked="cbIncogniton_Unchecked"
                       Checked="cbIncogniton_Checked"
                       Indeterminate="cbIncogniton_Indeterminate"/>
+            <Button Name="btEnter" Click="btEnter_Click" Margin="7" Content="Войти" ToolTip="Нажмите, для входа в систему и выхода из режима инкогнито."/>
             <Button Name="btImageLoaded" Click="btImageLoaded_Click" Margin="7" Content="Загрузить" ToolTip="Нажмите, для загрузки изображения в базу данных."/>
             <Button Name="btImaegSearch" Click="btImaegSearch_Click" Margin="7" Content="Просмотр" ToolTip="Нажмите, для просмотра изображений из базы данных."/>
         </StackPanel>

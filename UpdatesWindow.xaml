@@ -1,0 +1,89 @@
+﻿<Window x:Class="ImageDBSave.UpdatesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ImageDBSave"
+        mc:Ignorable="d"
+        Title="Обновления" Height="450" Width="700"
+        MinHeight="450"
+        MinWidth="700"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Closing="Window_Closing">
+    <Grid>
+
+        
+        
+        <ListView Margin="19" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+            <ListViewItem>
+                <StackPanel>
+                    <Label FontSize="20" Padding="0" Content="Ver 0.0.0"/>
+                    <TextBlock Name="Ver_0_0_0" TextWrapping="Wrap" Text="Создание проекта. Добавление основное окон приложения. Был прописан шаблон подключения к базе данных."/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem>
+                <StackPanel>
+                    <Label FontSize="20" Padding="0" Content="Ver 0.0.1"/>
+                    <TextBlock TextWrapping="Wrap" Text="Добавлено окно оповещения о Alpha версии приложения."/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem>
+                <StackPanel>
+                    <Label FontSize="20" Padding="0" Content="Ver 0.0.2"/>
+                    <TextBlock TextWrapping="Wrap" Text="Загрузка ресурсов разработчика и их тестирование."/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem>
+                <StackPanel>
+                    <Label FontSize="20" Padding="0" Content="Ver 0.0.3"/>
+                    <TextBlock TextWrapping="Wrap" Text="Добавлены элементы управелния интерфейса."/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem>
+                <StackPanel>
+                    <Label FontSize="20" Padding="0" Content="Ver 0.0.5"/>
+                    <TextBlock TextWrapping="Wrap" Text="Добавлена форма авторизации. Добавлен переход между формами. Добавлено уточнаяющее действие при выходе из приложения окно."/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem>
+                <StackPanel>
+                    <Label FontSize="20" Padding="0" Content="Ver 0.0.6"/>
+                    <TextBlock TextWrapping="Wrap" Text="Добавлены эллементы, отображающиеся в зависимоти от статуса авторизации пользователя."/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem>
+                <StackPanel>
+                    <Label FontSize="20" Padding="0" Content="Ver 0.0.7"/>
+                    <TextBlock TextWrapping="Wrap" Text="Исправление ошибок. Скрытие уточнаяющее действие при выходе из приложения окно."/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem>
+                <StackPanel>
+                    <Label FontSize="20" Padding="0" Content="Ver 0.0.8"/>
+                    <TextBlock TextWrapping="Wrap" Text="Добавлено окно показа информации об обновлениях по версиям."/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem>
+                <StackPanel>
+                    <Label FontSize="20" Padding="0" Content="Ver 0.0.0"/>
+                    <TextBlock TextWrapping="Wrap" Text="..."/>
+                </StackPanel>
+            </ListViewItem>
+
+        </ListView>
+
+        <Button Name="btBack" Click="btBack_Click" Content="Вернуться" Width="60" Height="20" FontSize="10" HorizontalAlignment="Right" VerticalAlignment="Bottom" ToolTip="Нажмите на кнопку, что бы вернуться."/>
+
+        <TextBlock Style="{StaticResource Version}"/>
+    </Grid>
+</Window>

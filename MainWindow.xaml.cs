@@ -24,13 +24,15 @@ namespace ImageDBSave
         public MainWindow(string UserStatus)
         {
             InitializeComponent();
-            if(UserStatus == "UnName")
+            if (UserStatus == "UnName")
             {
                 cbIncogniton.Visibility = Visibility.Collapsed;
+                btEnter.Visibility = Visibility.Visible;
             }
             else
             {
                 cbIncogniton.Visibility = Visibility.Visible;
+                btEnter.Visibility = Visibility.Collapsed;
             }
         }
 
@@ -58,16 +60,24 @@ namespace ImageDBSave
             MessageBox.Show("Функция находится в разработке.");
         }
 
-        private void AplicationClose(object sender, CancelEventArgs e)
+        //public void AplicationClose(object sender, CancelEventArgs e)
+        //{
+        //    if (MessageBox.Show("Вы уверены, что хотите закрыть прилоежние?", "Закрыть приложение?", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+        //    {
+        //        e.Cancel = false;
+        //    }
+        //    else
+        //    {
+        //        e.Cancel = true;
+        //    }
+        //}
+        //Перенести в отдельный класс
+
+        private void btEnter_Click(object sender, RoutedEventArgs e)
         {
-            if(MessageBox.Show("Вы уверены, что хотите закрыть прилоежние?", "Закрыть приложение?", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
-            {
-                e.Cancel = false;
-            }
-            else
-            {
-                e.Cancel = true;
-            }
+            AuthorizationWindow authorizationWindow = new();
+            authorizationWindow.Show();
+            Close();
         }
     }
 }

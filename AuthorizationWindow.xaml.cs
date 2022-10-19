@@ -42,8 +42,8 @@ namespace ImageDBSave
             if(cbInkognito.IsChecked  == true)
             {
                 string UserStatus = tbUserName.Text;
-                new MainWindow(UserStatus).ShowDialog();
-                //MainWindow mainWindow = new(IdUser);
+                new MainWindow(UserStatus).Show();
+                //MainWindow mainWindow = new(UserStatus);
                 //mainWindow.ShowDialog();
                 Close();
             }
@@ -54,8 +54,8 @@ namespace ImageDBSave
                     if(pbUserPassword.Password.Length >0)
                     {
                         string UserStatus = tbUserName.Text;
-                        new MainWindow(UserStatus).ShowDialog();
-                        //MainWindow mainWindow = new(IdUser);
+                        new MainWindow(UserStatus).Show();
+                        //MainWindow mainWindow = new(UserStatus);
                         //mainWindow.ShowDialog();
                         Close();
                     }

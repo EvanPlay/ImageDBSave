@@ -27,6 +27,13 @@
                         <ListItem>
                             <Paragraph FontSize="14">Просмотр файлов, находящихся в Базе Данных - отсутсвует</Paragraph>
                         </ListItem>
+                        <ListItem>
+                            <Paragraph FontSize="14">
+                                <Hyperlink NavigateUri="UpdatesWindow.xaml"
+                                           Click="Hyperlink_Click">Обновления</Hyperlink> версии:
+                                <TextBlock Margin="0" Style="{StaticResource Version}"/>
+                            </Paragraph>
+                        </ListItem>
                     </List>
                 </FlowDocument>
             </FlowDocumentScrollViewer>
