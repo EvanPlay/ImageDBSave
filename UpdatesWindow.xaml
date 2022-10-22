@@ -13,77 +13,79 @@
         Closing="Window_Closing">
     <Grid>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Frame Grid.Row="1" Name="fUpdate" Margin="10"/>
         
-        
-        <ListView Margin="19" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <!--<StackPanel Name="spUpdate" Grid.Row="0">-->
 
-            <ListViewItem>
-                <StackPanel>
-                    <Label FontSize="20" Padding="0" Content="Ver 0.0.0"/>
-                    <TextBlock Name="Ver_0_0_0" TextWrapping="Wrap" Text="Создание проекта. Добавление основное окон приложения. Был прописан шаблон подключения к базе данных."/>
+            <ListView Grid.Row="0" Margin="19" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+                    <ListViewItem MouseDoubleClick="ListViewItem1_MouseDoubleClick">
+                        <StackPanel>
+                        <Label FontSize="20" Padding="0" Content="Ver 0.0.0"/>
+                    </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem MouseDoubleClick="ListViewItem2_MouseDoubleClick">
+                        <StackPanel>
+                        <Label FontSize="20" Padding="0" Content="Ver 0.0.1"/>
+                    </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem MouseDoubleClick="ListViewItem3_MouseDoubleClick">
+                        <StackPanel>
+                        <Label FontSize="20" Padding="0" Content="Ver 0.0.2"/>
+                    </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem MouseDoubleClick="ListViewItem4_MouseDoubleClick">
+                        <StackPanel>
+                        <Label FontSize="20" Padding="0" Content="Ver 0.0.3"/>
+                    </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem MouseDoubleClick="ListViewItem5_MouseDoubleClick">
+                        <StackPanel>
+                    <Label FontSize="20" Padding="0" Content="Ver 0.0.4 - 0.0.5"/>
                 </StackPanel>
-            </ListViewItem>
+                    </ListViewItem>
 
-            <ListViewItem>
-                <StackPanel>
-                    <Label FontSize="20" Padding="0" Content="Ver 0.0.1"/>
-                    <TextBlock TextWrapping="Wrap" Text="Добавлено окно оповещения о Alpha версии приложения."/>
-                </StackPanel>
-            </ListViewItem>
-
-            <ListViewItem>
-                <StackPanel>
-                    <Label FontSize="20" Padding="0" Content="Ver 0.0.2"/>
-                    <TextBlock TextWrapping="Wrap" Text="Загрузка ресурсов разработчика и их тестирование."/>
-                </StackPanel>
-            </ListViewItem>
-
-            <ListViewItem>
-                <StackPanel>
-                    <Label FontSize="20" Padding="0" Content="Ver 0.0.3"/>
-                    <TextBlock TextWrapping="Wrap" Text="Добавлены элементы управелния интерфейса."/>
-                </StackPanel>
-            </ListViewItem>
-
-            <ListViewItem>
-                <StackPanel>
-                    <Label FontSize="20" Padding="0" Content="Ver 0.0.5"/>
-                    <TextBlock TextWrapping="Wrap" Text="Добавлена форма авторизации. Добавлен переход между формами. Добавлено уточнаяющее действие при выходе из приложения окно."/>
-                </StackPanel>
-            </ListViewItem>
-
-            <ListViewItem>
-                <StackPanel>
+                    <ListViewItem MouseDoubleClick="ListViewItem6_MouseDoubleClick">
+                        <StackPanel>
                     <Label FontSize="20" Padding="0" Content="Ver 0.0.6"/>
-                    <TextBlock TextWrapping="Wrap" Text="Добавлены эллементы, отображающиеся в зависимоти от статуса авторизации пользователя."/>
                 </StackPanel>
-            </ListViewItem>
+                    </ListViewItem>
 
-            <ListViewItem>
-                <StackPanel>
+                    <ListViewItem MouseDoubleClick="ListViewItem7_MouseDoubleClick">
+                        <StackPanel>
                     <Label FontSize="20" Padding="0" Content="Ver 0.0.7"/>
-                    <TextBlock TextWrapping="Wrap" Text="Исправление ошибок. Скрытие уточнаяющее действие при выходе из приложения окно."/>
                 </StackPanel>
-            </ListViewItem>
+                    </ListViewItem>
 
-            <ListViewItem>
-                <StackPanel>
+                    <ListViewItem MouseDoubleClick="ListViewItem8_MouseDoubleClick">
+                        <StackPanel>
                     <Label FontSize="20" Padding="0" Content="Ver 0.0.8"/>
-                    <TextBlock TextWrapping="Wrap" Text="Добавлено окно показа информации об обновлениях по версиям."/>
                 </StackPanel>
-            </ListViewItem>
+                    </ListViewItem>
 
-            <ListViewItem>
-                <StackPanel>
-                    <Label FontSize="20" Padding="0" Content="Ver 0.0.0"/>
-                    <TextBlock TextWrapping="Wrap" Text="..."/>
-                </StackPanel>
-            </ListViewItem>
+                    <ListViewItem MouseDoubleClick="ListViewItem9_MouseDoubleClick">
+                        <StackPanel>
+                            <Label FontSize="20" Padding="0" Content="Ver 0.0.0"/>
+                            <TextBlock TextWrapping="Wrap" Text="..."/>
+                        </StackPanel>
+                    </ListViewItem>
 
-        </ListView>
+                </ListView>
 
+            <Frame Name="fUpdateInfo"/>
+
+        <!--</StackPanel>-->
         <Button Name="btBack" Click="btBack_Click" Content="Вернуться" Width="60" Height="20" FontSize="10" HorizontalAlignment="Right" VerticalAlignment="Bottom" ToolTip="Нажмите на кнопку, что бы вернуться."/>
-
-        <TextBlock Style="{StaticResource Version}"/>
+        <TextBlock Style="{StaticResource Version}" VerticalAlignment="Top"/>
+        
     </Grid>
 </Window>
