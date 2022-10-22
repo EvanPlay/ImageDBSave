@@ -33,12 +33,12 @@ namespace ImageDBSave
             Close();
         }
 
-        private void btBack_Click(object sender, RoutedEventArgs e)
-        {
-            MessageWindow messageWindow = new();
-            messageWindow.Show();
-            Close();
-        }
+        //private void btBack_Click(object sender, RoutedEventArgs e)
+        //{
+        //    MessageWindow messageWindow = new();
+        //    messageWindow.Show();
+        //    Close();
+        //}
 
         private void ListViewItem1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {

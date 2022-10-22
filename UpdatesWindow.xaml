@@ -83,7 +83,7 @@
             <Frame Name="fUpdateInfo"/>
 
         <!--</StackPanel>-->
-        <Button Name="btBack" Click="btBack_Click" Content="Вернуться" Width="60" Height="20" FontSize="10" HorizontalAlignment="Right" VerticalAlignment="Bottom" ToolTip="Нажмите на кнопку, что бы вернуться."/>
+        <!--<Button Name="btBack" Click="btBack_Click" Content="Вернуться" Width="60" Height="20" FontSize="10" HorizontalAlignment="Right" VerticalAlignment="Bottom" ToolTip="Нажмите на кнопку, что бы вернуться."/>-->
         <TextBlock Style="{StaticResource Version}" VerticalAlignment="Top"/>
         
     </Grid>
