@@ -30,12 +30,14 @@ namespace ImageDBSave
         {
             MessageWindow messageWindow = new();
             messageWindow.Show();
+            Close();
         }
 
         private void btBack_Click(object sender, RoutedEventArgs e)
         {
             MessageWindow messageWindow = new();
             messageWindow.Show();
+            Close();
         }
 
         private void ListViewItem1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -80,7 +82,7 @@ namespace ImageDBSave
 
         private void ListViewItem9_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            fUpdate.Navigate(new UpdatePage.Update009());
         }
     }
 }
