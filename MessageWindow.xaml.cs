@@ -26,7 +26,7 @@ namespace ImageDBSave
 
         private void btClose_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void Hyperlink_Click(object sender, RoutedEventArgs e)

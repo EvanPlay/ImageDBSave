@@ -10,7 +10,8 @@
         MinWidth="700"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
-        Closing="Window_Closing">
+        Closing="Window_Closing"
+        >
     <Grid>
 
         <Grid.RowDefinitions>
