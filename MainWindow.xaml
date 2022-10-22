@@ -16,13 +16,9 @@
         </Grid.ColumnDefinitions>
 
         <Border Grid.Column="1" Margin="10" BorderThickness="5" BorderBrush="#303030">
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-
-                <Image Name="UserImage" Source="TestSource\587bcd241466d.jpg"/>
-
-        </StackPanel>
+            <Frame Grid.Column="1" Name="fImage"/>
         </Border>
-
+        
         <StackPanel Grid.Column="0" Margin="10">
             <!--<Label Content="Имя пользователя" Padding="1"/>-->
             <Label Content="Имя файла" Padding="1"/>
@@ -33,7 +29,17 @@
                       Indeterminate="cbIncogniton_Indeterminate"/>
             <Button Name="btEnter" Click="btEnter_Click" Margin="7" Content="Войти" ToolTip="Нажмите, для входа в систему и выхода из режима инкогнито."/>
             <Button Name="btImageLoaded" Click="btImageLoaded_Click" Margin="7" Content="Загрузить" ToolTip="Нажмите, для загрузки изображения в базу данных."/>
-            <Button Name="btImaegSearch" Click="btImaegSearch_Click" Margin="7" Content="Просмотр" ToolTip="Нажмите, для просмотра изображений из базы данных."/>
+
+
+            <Button Name="btStartedMain" Click="btStartedMain_Click" Margin="7"
+                    Content="Вернуться"
+                    ToolTip="Нажмите, для возвращения к странице просмотра загружаемого вами изображения."/>
+            <Button Name="btImageUserSetch" Click="btImageUserSetch_Click" Margin="7"
+                    Content="Ваши изображения"
+                    ToolTip="Нажмите, для промсотра вами загруженных изображений."/>
+            <Button Name="btImaegSearch" Click="btImaegSearch_Click" Margin="7"
+                    Content="Просмотр"
+                    ToolTip="Нажмите, для просмотра изображений из базы данных."/>
         </StackPanel>
 
         <TextBlock Style="{StaticResource Version}"/>

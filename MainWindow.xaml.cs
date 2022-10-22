@@ -21,9 +21,13 @@ namespace ImageDBSave
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow(string UserStatus)
         {
             InitializeComponent();
+            this.Loaded += MainWindow_Loaded;
+            btStartedMain.Visibility = Visibility.Collapsed;
+
             if (UserStatus == "UnName")
             {
                 cbIncogniton.Visibility = Visibility.Collapsed;
@@ -34,6 +38,11 @@ namespace ImageDBSave
                 cbIncogniton.Visibility = Visibility.Visible;
                 btEnter.Visibility = Visibility.Collapsed;
             }
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            fImage.Navigate(new ProgramPage.ImageShowPage());
         }
 
         private void cbIncogniton_Unchecked(object sender, RoutedEventArgs e)
@@ -57,7 +66,24 @@ namespace ImageDBSave
 
         private void btImaegSearch_Click(object sender, RoutedEventArgs e)
         {
+            fImage.Navigate(new ProgramPage.MyUserImage());
             MessageBox.Show("Функция находится в разработке.");
+            btStartedMain.Visibility = Visibility.Visible;
+        }
+
+        private void btImageUserSetch_Click(object sender, RoutedEventArgs e)
+        {
+            fImage.Navigate(new ProgramPage.UserImage());
+            MessageBox.Show("Функция находится в разработке.");
+            btStartedMain.Visibility = Visibility.Visible;
+        }
+        private void btStartedMain_Click(object sender, RoutedEventArgs e)
+        {
+            while (fImage.NavigationService.RemoveBackEntry() != null) ;
+
+            fImage.Navigate(new ProgramPage.ImageShowPage());
+
+            btStartedMain.Visibility = Visibility.Collapsed;
         }
 
         //public void AplicationClose(object sender, CancelEventArgs e)

@@ -74,8 +74,7 @@
 
                     <ListViewItem MouseDoubleClick="ListViewItem9_MouseDoubleClick">
                         <StackPanel>
-                            <Label FontSize="20" Padding="0" Content="Ver 0.0.0"/>
-                            <TextBlock TextWrapping="Wrap" Text="..."/>
+                            <Label FontSize="20" Padding="0" Content="Ver 0.0.9"/>
                         </StackPanel>
                     </ListViewItem>
 
