@@ -10,30 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ImageDBSave
 {
     /// <summary>
-    /// Логика взаимодействия для MessageWindow.xaml
+    /// Логика взаимодействия для UserControl1.xaml
     /// </summary>
-    public partial class MessageWindow : Window
+    public partial class UserControl1 : UserControl
     {
-        public MessageWindow()
+        public UserControl1()
         {
             InitializeComponent();
-        }
-
-        private void btClose_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-
-        private void Hyperlink_Click(object sender, RoutedEventArgs e)
-        {
-            UpdatesWindow updatesWindow = new();
-            updatesWindow.Show();
-            Close();
         }
     }
 }

@@ -67,12 +67,14 @@ namespace ImageDBSave
         private void btImaegSearch_Click(object sender, RoutedEventArgs e)
         {
             fImage.Navigate(new ProgramPage.MyUserImage());
+
             MessageBox.Show("Функция находится в разработке.");
             btStartedMain.Visibility = Visibility.Visible;
         }
 
         private void btImageUserSetch_Click(object sender, RoutedEventArgs e)
         {
+
             fImage.Navigate(new ProgramPage.UserImage());
             MessageBox.Show("Функция находится в разработке.");
             btStartedMain.Visibility = Visibility.Visible;

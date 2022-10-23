@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.ComponentModel;
 
 namespace ImageDBSave
 {
@@ -26,17 +27,18 @@ namespace ImageDBSave
             InitializeComponent();
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void Window_Closing(object sender, CancelEventArgs e)
         {
             MessageWindow messageWindow = new();
             messageWindow.Show();
         }
 
-        private void btBack_Click(object sender, RoutedEventArgs e)
-        {
-            MessageWindow messageWindow = new();
-            messageWindow.Show();
-        }
+        //private void btBack_Click(object sender, RoutedEventArgs e)
+        //{
+        //    MessageWindow messageWindow = new();
+        //    messageWindow.Show();
+        //    this.Close();
+        //}
 
         private void ListViewItem1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
@@ -80,7 +82,12 @@ namespace ImageDBSave
 
         private void ListViewItem9_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+            fUpdate.Navigate(new UpdatePage.Update009());
+        }
 
+        private void ListViewItem010_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            fUpdate.Navigate(new UpdatePage.Update010());
         }
     }
 }
