@@ -16,6 +16,7 @@
         </Grid.ColumnDefinitions>
 
         <Border Grid.Column="1" Margin="10" BorderThickness="5" BorderBrush="#303030">
+            <!--<Control Grid.Column="1" Name="cImage"/>-->
             <Frame Grid.Column="1" Name="fImage"/>
         </Border>
         
@@ -27,6 +28,7 @@
                       Unchecked="cbIncogniton_Unchecked"
                       Checked="cbIncogniton_Checked"
                       Indeterminate="cbIncogniton_Indeterminate"/>
+
             <Button Name="btEnter" Click="btEnter_Click" Margin="7" Content="Войти" ToolTip="Нажмите, для входа в систему и выхода из режима инкогнито."/>
             <Button Name="btImageLoaded" Click="btImageLoaded_Click" Margin="7" Content="Загрузить" ToolTip="Нажмите, для загрузки изображения в базу данных."/>
 
