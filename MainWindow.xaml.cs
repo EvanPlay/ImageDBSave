@@ -62,27 +62,16 @@ namespace ImageDBSave
 
         private void btImageLoaded_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Функция находится в разработке.");
-        }
-        public int CreateNewImage(byte[] imageData)
-        {
-            int newImageID = 0;
-
-            using (SqlCommand createCommand = new SqlCommand("[dbo].[sp_add_image]", connection)
+            string filename = @"TestSource\587bcd241466d.jpg"; //путь к файлу
+            string filetitle = "кот"; //Название файла
+            string shortFileName = filename.Substring(filename.LastIndexOf('\\') + 1); //короткое имя для сохранения
+            byte[] imageData;
+            using(System.IO.FileStream fs = new System.IO.FileStream(filename, System.IO.FileMode.Open))
             {
-                CommantTimeout = 100,
-                CommandType = CommandType.StoredProcedure
-            })
-            {
-                createCommand.Parameters.AddWithValue("ImageDate", imageData);
-                createCommand.Parameters.Add("NewImageID", SqlDbType.Int).Direction = ParameterDirection.InputOutput;
-
-                createCommand.ExecuteNonQuery();
-
-                object result = createCommand.Parameters["NewImageID"].Vaule;
-                newImageID = (int)result;
+                imageData = new byte[fs.Length];
+                fs.Read(imageData, 0, imageData.Length);
             }
-            return newImageID;
+            MessageBox.Show("Функция находится в разработке.");
         }
 
         private void btImaegSearch_Click(object sender, RoutedEventArgs e)
