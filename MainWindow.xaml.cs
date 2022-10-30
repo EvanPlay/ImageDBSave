@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,6 +62,15 @@ namespace ImageDBSave
 
         private void btImageLoaded_Click(object sender, RoutedEventArgs e)
         {
+            string filename = @"TestSource\587bcd241466d.jpg"; //путь к файлу
+            string filetitle = "кот"; //Название файла
+            string shortFileName = filename.Substring(filename.LastIndexOf('\\') + 1); //короткое имя для сохранения
+            byte[] imageData;
+            using(System.IO.FileStream fs = new System.IO.FileStream(filename, System.IO.FileMode.Open))
+            {
+                imageData = new byte[fs.Length];
+                fs.Read(imageData, 0, imageData.Length);
+            }
             MessageBox.Show("Функция находится в разработке.");
         }
 
