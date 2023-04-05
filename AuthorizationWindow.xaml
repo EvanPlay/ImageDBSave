@@ -7,8 +7,16 @@
         mc:Ignorable="d"
         Title="Авторизация" Height="400" Width="400"
         ResizeMode="NoResize"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="False"
+        Background="Transparent">
+    
+    <!--FontFamily ="{StaticResource myFont}"-->
+
     <Grid>
+
+        <Border Style="{StaticResource BackgraundStyle}"/>
+
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="200">
             <Label Content="Введите имя пользователя"/>
             <TextBox Name="tbUserName" ToolTip="Введите в это поле своё имя/логин."/>
@@ -25,6 +33,8 @@
                     ToolTip="Нажмите, что бы войти в аккаунт."/>
 
         </StackPanel>
+        
         <TextBlock Style="{StaticResource Version}"/>
+        
     </Grid>
 </Window>

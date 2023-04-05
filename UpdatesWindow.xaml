@@ -12,75 +12,101 @@
         ResizeMode="NoResize"
         Closing="Window_Closing"
         FontSize="20"
+        Background="Transparent"
         >
+
+    <Border Style="{StaticResource BackgraundStyle}">
+    
     <Grid>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
 
-        <Frame Grid.Row="1" Name="fUpdate" Margin="10"/>
+        <Frame Grid.Column="1" Name="fUpdate" Margin="10"/>
         
         <!--<StackPanel Name="spUpdate" Grid.Row="0">-->
 
-            <ListView Grid.Row="0" Margin="19" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView Grid.Column="0" Margin="19" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
-                    <ListViewItem MouseDoubleClick="ListViewItem1_MouseDoubleClick">
+                <ListViewItem Style="{StaticResource ListStyle}"
+                              MouseDoubleClick="ListViewItem1_MouseDoubleClick">
                         <StackPanel>
                         <Label Padding="0" Content="Ver 0.0.0"/>
-                    </StackPanel>
+                        </StackPanel>
                     </ListViewItem>
 
-                    <ListViewItem MouseDoubleClick="ListViewItem2_MouseDoubleClick">
+                <ListViewItem Style="{StaticResource ListStyle}"
+                              MouseDoubleClick="ListViewItem2_MouseDoubleClick">
                         <StackPanel>
                         <Label Padding="0" Content="Ver 0.0.1"/>
                     </StackPanel>
                     </ListViewItem>
 
-                    <ListViewItem MouseDoubleClick="ListViewItem3_MouseDoubleClick">
+                <ListViewItem Style="{StaticResource ListStyle}"
+                              MouseDoubleClick="ListViewItem3_MouseDoubleClick">
                         <StackPanel>
                         <Label Padding="0" Content="Ver 0.0.2"/>
                     </StackPanel>
                     </ListViewItem>
 
-                    <ListViewItem MouseDoubleClick="ListViewItem4_MouseDoubleClick">
+                <ListViewItem Style="{StaticResource ListStyle}"
+                              MouseDoubleClick="ListViewItem4_MouseDoubleClick">
                         <StackPanel>
                         <Label Padding="0" Content="Ver 0.0.3"/>
                     </StackPanel>
                     </ListViewItem>
 
-                    <ListViewItem MouseDoubleClick="ListViewItem5_MouseDoubleClick">
+                <ListViewItem Style="{StaticResource ListStyle}"
+                              MouseDoubleClick="ListViewItem5_MouseDoubleClick">
                         <StackPanel>
                     <Label Padding="0" Content="Ver 0.0.4 - 0.0.5"/>
                 </StackPanel>
                     </ListViewItem>
 
-                    <ListViewItem MouseDoubleClick="ListViewItem6_MouseDoubleClick">
+                <ListViewItem Style="{StaticResource ListStyle}"
+                              MouseDoubleClick="ListViewItem6_MouseDoubleClick">
                         <StackPanel>
                     <Label Padding="0" Content="Ver 0.0.6"/>
                 </StackPanel>
                     </ListViewItem>
 
-                    <ListViewItem MouseDoubleClick="ListViewItem7_MouseDoubleClick">
+                <ListViewItem Style="{StaticResource ListStyle}"
+                              MouseDoubleClick="ListViewItem7_MouseDoubleClick">
                         <StackPanel>
                     <Label Padding="0" Content="Ver 0.0.7"/>
                 </StackPanel>
                     </ListViewItem>
 
-                    <ListViewItem MouseDoubleClick="ListViewItem8_MouseDoubleClick">
+                <ListViewItem Style="{StaticResource ListStyle}"
+                              MouseDoubleClick="ListViewItem8_MouseDoubleClick">
                         <StackPanel>
                     <Label Padding="0" Content="Ver 0.0.8"/>
                 </StackPanel>
                     </ListViewItem>
 
-                    <ListViewItem MouseDoubleClick="ListViewItem9_MouseDoubleClick">
-                        <StackPanel>
-                            <Label Padding="0" Content="Ver 0.0.9"/>
-                        </StackPanel>
-                    </ListViewItem>
+                <ListViewItem Style="{StaticResource ListStyle}"
+                              MouseDoubleClick="ListViewItem9_MouseDoubleClick">
+                    <StackPanel>
+                        <Label Padding="0" Content="Ver 0.0.9"/>
+                    </StackPanel>
 
-            <!--<ListViewItem MouseDoubleClick="ListViewItem010_MouseDoubleClick">
+                </ListViewItem>
+
+                <ListViewItem Style="{StaticResource ListStyle}"
+                              MouseDoubleClick="ListViewItem11_MouseDoubleClick">
+
+                    <StackPanel>
+
+                        <Label Padding="0" Content="Ver 0.0.11"/>
+
+                    </StackPanel>
+                    
+                </ListViewItem>
+
+
+                <!--<ListViewItem MouseDoubleClick="ListViewItem010_MouseDoubleClick">
                 <StackPanel>
                     <Label Padding="0" Content="Ver 0.1.0"/>
                 </StackPanel>
@@ -92,7 +118,10 @@
 
         <!--</StackPanel>-->
         <!--<Button Name="btBack" Click="btBack_Click" Content="Вернуться" Width="60" Height="20" FontSize="10" HorizontalAlignment="Right" VerticalAlignment="Bottom" ToolTip="Нажмите на кнопку, что бы вернуться."/>-->
-        <TextBlock Style="{StaticResource Version}" VerticalAlignment="Top" FontSize="10"/>
+        <TextBlock Style="{StaticResource Version}" FontSize="10"/>
         
-    </Grid>
+        </Grid>
+
+    </Border>
+
 </Window>

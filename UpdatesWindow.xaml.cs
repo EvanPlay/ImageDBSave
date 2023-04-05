@@ -85,9 +85,14 @@ namespace ImageDBSave
             fUpdate.Navigate(new UpdatePage.Update009());
         }
 
-        private void ListViewItem010_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void ListViewItem10_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             fUpdate.Navigate(new UpdatePage.Update010());
+        }
+
+        private void ListViewItem11_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            fUpdate.Navigate(new UpdatePage.Update011());
         }
     }
 }

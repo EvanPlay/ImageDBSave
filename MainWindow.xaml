@@ -6,44 +6,68 @@
         xmlns:local="clr-namespace:ImageDBSave"
         mc:Ignorable="d"
         Title="Окно приложения" Height="550" Width="900"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="False"
+        Background="Transparent"
+        >
     <!--Closing="AplicationClose"-->
-        
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="4*"/>
-        </Grid.ColumnDefinitions>
 
-        <Border Grid.Column="1" Margin="10" BorderThickness="5" BorderBrush="#303030">
-            <!--<Control Grid.Column="1" Name="cImage"/>-->
-            <Frame Grid.Column="1" Name="fImage"/>
-        </Border>
-        
-        <StackPanel Grid.Column="0" Margin="10">
-            <!--<Label Content="Имя пользователя" Padding="1"/>-->
-            <Label Content="Имя файла" Padding="1"/>
-            <TextBox Name="tbImageName" Margin="10"/>
-            <CheckBox Name="cbIncogniton" Margin="5" Content="Сохранино инкогнито" ToolTip="Поставьте галочку для сохранея изображения в базе данных, без упоминания автора загрузки."
+    <Grid>
+
+        <Border Style="{StaticResource BackgraundStyle}">
+
+            <Grid>
+                
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Margin="5">
+                    <!--<Label Content="Имя пользователя" Padding="1"/>-->
+                    <Label Content="Имя файла" Padding="1"/>
+                    <TextBox Name="tbImageName" Margin="10"/>
+                    <CheckBox Name="cbIncogniton" Margin="5" Content="Сохранино инкогнито" ToolTip="Поставьте галочку для сохранея изображения в базе данных, без упоминания автора загрузки."
                       Unchecked="cbIncogniton_Unchecked"
                       Checked="cbIncogniton_Checked"
                       Indeterminate="cbIncogniton_Indeterminate"/>
 
-            <Button Name="btEnter" Click="btEnter_Click" Margin="7" Content="Войти" ToolTip="Нажмите, для входа в систему и выхода из режима инкогнито."/>
-            <Button Name="btImageLoaded" Click="btImageLoaded_Click" Margin="7" Content="Загрузить" ToolTip="Нажмите, для загрузки изображения в базу данных."/>
+                    <Button Name="btEnter" Click="btEnter_Click" Margin="7" Content="Войти" ToolTip="Нажмите, для входа в систему и выхода из режима инкогнито."/>
+                    <Button Name="btImageLoaded" Click="btImageLoaded_Click" Margin="7" Content="Загрузить" ToolTip="Нажмите, для загрузки изображения в базу данных."/>
 
 
-            <Button Name="btStartedMain" Click="btStartedMain_Click" Margin="7"
+                    <Button Name="btStartedMain" Click="btStartedMain_Click" Margin="7"
                     Content="Вернуться"
                     ToolTip="Нажмите, для возвращения к странице просмотра загружаемого вами изображения."/>
-            <Button Name="btImageUserSetch" Click="btImageUserSetch_Click" Margin="7"
+
+                    <Button Name="btImageUserSetch" Click="btImageUserSetch_Click" Margin="7"
                     Content="Ваши изображения"
                     ToolTip="Нажмите, для промсотра вами загруженных изображений."/>
-            <Button Name="btImaegSearch" Click="btImaegSearch_Click" Margin="7"
+
+                    <Button Name="btImaegSearch" Click="btImaegSearch_Click" Margin="7"
                     Content="Просмотр"
                     ToolTip="Нажмите, для просмотра изображений из базы данных."/>
-        </StackPanel>
 
-        <TextBlock Style="{StaticResource Version}"/>
+                </StackPanel>
+
+                <Border Grid.Column="1" Margin="10" BorderThickness="5"
+                BorderBrush="#303030"
+                Background="#FFE2E2E2"
+                CornerRadius="20">
+                    <!--<Control Grid.Column="1" Name="cImage"/>-->
+                    <Frame Grid.Column="1" Name="fImage" />
+
+
+
+
+                </Border>
+
+                <TextBlock Style="{StaticResource Version}"/>
+
+            </Grid>
+
+        </Border>
+
     </Grid>
+    
 </Window>

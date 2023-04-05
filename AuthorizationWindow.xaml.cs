@@ -27,6 +27,7 @@ namespace ImageDBSave
         private void cbInkognito_Unchecked(object sender, RoutedEventArgs e)
         {
             tbUserName.IsReadOnly = false;
+            tbUserName.Foreground = Brushes.Black;
             tbUserName.Text = "";
         }
 

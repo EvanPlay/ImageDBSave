@@ -22,11 +22,11 @@ namespace ImageDBSave
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+
         public MainWindow(string UserStatus)
         {
             InitializeComponent();
-            this.Loaded += MainWindow_Loaded;
+            Loaded += MainWindow_Loaded;
             btStartedMain.Visibility = Visibility.Collapsed;
 
             if (UserStatus == "UnName")
@@ -62,32 +62,24 @@ namespace ImageDBSave
 
         private void btImageLoaded_Click(object sender, RoutedEventArgs e)
         {
-            string filename = @"TestSource\587bcd241466d.jpg"; //путь к файлу
-            string filetitle = "кот"; //Название файла
-            string shortFileName = filename.Substring(filename.LastIndexOf('\\') + 1); //короткое имя для сохранения
-            byte[] imageData;
-            using(System.IO.FileStream fs = new System.IO.FileStream(filename, System.IO.FileMode.Open))
-            {
-                imageData = new byte[fs.Length];
-                fs.Read(imageData, 0, imageData.Length);
-            }
-            MessageBox.Show("Функция находится в разработке.");
+            AppCommands appCommands = new();
+            appCommands.ImageLoaded();
         }
+
 
         private void btImaegSearch_Click(object sender, RoutedEventArgs e)
         {
-            fImage.Navigate(new ProgramPage.MyUserImage());
-
             MessageBox.Show("Функция находится в разработке.");
-            btStartedMain.Visibility = Visibility.Visible;
+            btStartedMain.Visibility = Visibility.Visible;//Перенести в класс AppCommand
         }
+        
 
         private void btImageUserSetch_Click(object sender, RoutedEventArgs e)
         {
 
             fImage.Navigate(new ProgramPage.UserImage());
             MessageBox.Show("Функция находится в разработке.");
-            btStartedMain.Visibility = Visibility.Visible;
+            btStartedMain.Visibility = Visibility.Visible;//Перенести в класс AppCommand
         }
         private void btStartedMain_Click(object sender, RoutedEventArgs e)
         {
@@ -95,7 +87,7 @@ namespace ImageDBSave
 
             fImage.Navigate(new ProgramPage.ImageShowPage());
 
-            btStartedMain.Visibility = Visibility.Collapsed;
+            btStartedMain.Visibility = Visibility.Collapsed;//Перенести в класс AppCommand
         }
 
         //public void AplicationClose(object sender, CancelEventArgs e)
@@ -109,12 +101,11 @@ namespace ImageDBSave
         //        e.Cancel = true;
         //    }
         //}
-        //Перенести в отдельный класс
 
         private void btEnter_Click(object sender, RoutedEventArgs e)
         {
-            AuthorizationWindow authorizationWindow = new();
-            authorizationWindow.Show();
+            AppCommands appCommands = new();
+            appCommands.btEnter();
             Close();
         }
     }
