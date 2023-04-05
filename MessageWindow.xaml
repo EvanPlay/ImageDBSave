@@ -8,8 +8,16 @@
         Title="MessageWindow" Height="450" Width="500"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
-        Topmost="True">
+        Topmost="True"
+        AllowsTransparency="False"
+        Background="Transparent"
+        >
     <Grid>
+
+        <Border Style="{StaticResource BackgraundStyle}">
+
+            <Grid>
+        
         <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Label Margin="20" Padding="0" FontSize="20" HorizontalAlignment="Center">Внимание!</Label>
             <Label Padding="0" FontSize="15" HorizontalAlignment="Center">Данное приложение находится в Alpha версии.</Label>
@@ -42,5 +50,10 @@
         </StackPanel>
 
         <TextBlock Style="{StaticResource Version}"/>
+
+            </Grid>
+
+        </Border>
+        
     </Grid>
 </Window>
