@@ -9,6 +9,7 @@
       Title="Update007">
 
     <Grid>
-        <TextBlock TextWrapping="Wrap" Text="Исправление ошибок. Скрытие уточнаяющее действие при выходе из приложения окно."/>
+        <TextBlock TextWrapping="Wrap" Padding="10"
+                   Text="Исправление ошибок. Скрытие уточнаяющее действие при выходе из приложения окно."/>
     </Grid>
 </Page>

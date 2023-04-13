@@ -9,6 +9,7 @@
       Title="Update002">
 
     <Grid>
-        <TextBlock TextWrapping="Wrap" Text="Загрузка ресурсов разработчика и их тестирование."/>
+        <TextBlock TextWrapping="Wrap" Padding="10"
+                   Text="Загрузка ресурсов разработчика и их тестирование."/>
     </Grid>
 </Page>

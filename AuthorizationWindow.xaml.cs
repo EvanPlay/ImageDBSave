@@ -26,16 +26,14 @@ namespace ImageDBSave
 
         private void cbInkognito_Unchecked(object sender, RoutedEventArgs e)
         {
-            tbUserName.IsReadOnly = false;
-            tbUserName.Foreground = Brushes.Black;
+            tbUserName.IsEnabled = true;
             tbUserName.Text = "";
             pbUserPassword.IsEnabled = true;
         }
 
         private void cbInkognito_Checked(object sender, RoutedEventArgs e)
         {
-            tbUserName.IsReadOnly = true;
-            tbUserName.Foreground = Brushes.Gray;
+            tbUserName.IsEnabled = false;
             tbUserName.Text = "UnName";
             pbUserPassword.IsEnabled = false;
             pbUserPassword.Clear();
@@ -70,7 +68,7 @@ namespace ImageDBSave
                 }
                 else
                 {
-                    MessageBox.Show("Заполните поле имя-пароль.");
+                    MessageBox.Show("Заполните поле имени.");
                 }
             }
         }

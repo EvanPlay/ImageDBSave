@@ -63,7 +63,6 @@ namespace ImageDBSave
         private void btImageLoaded_Click(object sender, RoutedEventArgs e)
         {
             AppCommands appCommands = new();
-
             appCommands.ImageLoaded((x)=>MessageBox.Show(x));
 
         }

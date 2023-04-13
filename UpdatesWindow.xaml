@@ -24,12 +24,11 @@
                 <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
-        <Frame Grid.Column="1" Name="fUpdate" Margin="10"/>
+        <Frame Grid.Column="1" Name="fUpdate" Margin="10" BorderThickness="3" BorderBrush="Black"/>
         
         <!--<StackPanel Name="spUpdate" Grid.Row="0">-->
 
             <ListBox Grid.Column="0" Margin="19"
-                     
                      Name="lBVers" 
                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                      MouseDoubleClick="ListView_MouseDoubleClick">
@@ -38,13 +37,12 @@
                         <Grid>
                             <TextBlock Text="{Binding Name}"></TextBlock>
                         </Grid>
-                    </DataTemplate>                    
+                    </DataTemplate>
                 </ListBox.ItemTemplate>
-            
 
             </ListBox>
 
-            <Frame Name="fUpdateInfo"/>
+            <Border Name="bUpdateInfo"/>
 
         <!--</StackPanel>-->
         <!--<Button Name="btBack" Click="btBack_Click" Content="Вернуться" Width="60" Height="20" FontSize="10" HorizontalAlignment="Right" VerticalAlignment="Bottom" ToolTip="Нажмите на кнопку, что бы вернуться."/>-->

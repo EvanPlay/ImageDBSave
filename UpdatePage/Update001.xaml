@@ -9,6 +9,7 @@
       Title="Update001">
 
     <Grid>
-        <TextBlock TextWrapping="Wrap" Text="Добавлено окно оповещения о Alpha версии приложения."/>
+        <TextBlock TextWrapping="Wrap" Padding="10"
+                   Text="Добавлено окно оповещения о Alpha версии приложения."/>
     </Grid>
 </Page>

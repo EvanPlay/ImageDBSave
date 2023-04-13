@@ -9,6 +9,7 @@
       Title="Update011">
 
     <Grid>
-        <TextBlock TextWrapping="Wrap" Text="Начата оптимизация вызыва методов. Начата разработка интерфейса."/>
+        <TextBlock TextWrapping="Wrap" Padding="10"
+                   Text="Начата оптимизация вызыва методов. Начата разработка интерфейса."/>
     </Grid>
 </Page>

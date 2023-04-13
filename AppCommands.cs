@@ -15,6 +15,7 @@ namespace ImageDBSave
 
         public void ImageLoaded(Action<string> mes)
         {
+            
             string filename = @"TestSource\587bcd241466d.jpg"; //путь к файлу
             string filetitle = "кот"; //Название файла
             string shortFileName = filename.Substring(filename.LastIndexOf('\\') + 1); //короткое имя для сохранения

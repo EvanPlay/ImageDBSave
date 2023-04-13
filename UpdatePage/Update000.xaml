@@ -9,7 +9,7 @@
       Title="Update000">
 
     <Grid>
-        <TextBlock TextWrapping="Wrap"
+        <TextBlock TextWrapping="Wrap" Padding="10"
                    Text="Создание проекта. Добавление основное окон приложения. Был прописан шаблон подключения к базе данных."/>
     </Grid>
 </Page>

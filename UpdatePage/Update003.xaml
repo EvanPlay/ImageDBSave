@@ -9,6 +9,7 @@
       Title="Update003">
 
     <Grid>
-        <TextBlock TextWrapping="Wrap" Text="Добавлены элементы управелния интерфейса."/>
+        <TextBlock TextWrapping="Wrap" Padding="10"
+                   Text="Добавлены элементы управелния интерфейса."/>
     </Grid>
 </Page>
