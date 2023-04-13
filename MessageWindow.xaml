@@ -25,8 +25,8 @@
 
             <FlowDocumentScrollViewer Margin="10">
                 <FlowDocument>
-                    <List>
-                        <ListItem>
+                    <List FontFamily="arial">
+                        <ListItem >
                             <Paragraph FontSize="14">Загрузка файлов в приложение - отсутсвует</Paragraph>
                         </ListItem>
                         <ListItem>

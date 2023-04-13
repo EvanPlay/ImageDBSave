@@ -29,6 +29,7 @@ namespace ImageDBSave
             tbUserName.IsReadOnly = false;
             tbUserName.Foreground = Brushes.Black;
             tbUserName.Text = "";
+            pbUserPassword.IsEnabled = true;
         }
 
         private void cbInkognito_Checked(object sender, RoutedEventArgs e)
@@ -36,6 +37,8 @@ namespace ImageDBSave
             tbUserName.IsReadOnly = true;
             tbUserName.Foreground = Brushes.Gray;
             tbUserName.Text = "UnName";
+            pbUserPassword.IsEnabled = false;
+            pbUserPassword.Clear();
         }
 
         private void btEnter_Click(object sender, RoutedEventArgs e)

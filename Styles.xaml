@@ -17,7 +17,7 @@
            TargetType="TextBlock">
 
         <Setter Property="Text"
-                Value="Ver 0.0.11"/>
+                Value="Ver 0.0.12"/>
         <Setter Property="Margin"
                 Value="5"/>
         <Setter Property="HorizontalAlignment"

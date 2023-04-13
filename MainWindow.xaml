@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:ImageDBSave"
         mc:Ignorable="d"
         Title="Окно приложения" Height="550" Width="900"
+        MinHeight="550" MinWidth="900"
         WindowStartupLocation="CenterScreen"
         AllowsTransparency="False"
         Background="Transparent"

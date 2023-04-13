@@ -22,9 +22,9 @@ namespace ImageDBSave
     /// </summary>
     public partial class MainWindow : Window
     {
-
         public MainWindow(string UserStatus)
         {
+
             InitializeComponent();
             Loaded += MainWindow_Loaded;
             btStartedMain.Visibility = Visibility.Collapsed;
@@ -63,22 +63,29 @@ namespace ImageDBSave
         private void btImageLoaded_Click(object sender, RoutedEventArgs e)
         {
             AppCommands appCommands = new();
-            appCommands.ImageLoaded();
-        }
 
+            appCommands.ImageLoaded((x)=>MessageBox.Show(x));
+
+        }
 
         private void btImaegSearch_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Функция находится в разработке.");
-            btStartedMain.Visibility = Visibility.Visible;//Перенести в класс AppCommand
+            AppCommands appCommands = new();
+
+            appCommands.ImageSearch((mes)=>MessageBox.Show(mes));
+
+            btStartedMain.Visibility = Visibility.Visible;
+
+            //MessageBox.Show("Функция находится в разработке.");
+            //btStartedMain.Visibility = Visibility.Visible;//Перенести в класс AppCommand
         }
-        
 
         private void btImageUserSetch_Click(object sender, RoutedEventArgs e)
         {
-
             fImage.Navigate(new ProgramPage.UserImage());
+
             MessageBox.Show("Функция находится в разработке.");
+
             btStartedMain.Visibility = Visibility.Visible;//Перенести в класс AppCommand
         }
         private void btStartedMain_Click(object sender, RoutedEventArgs e)

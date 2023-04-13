@@ -5,33 +5,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace ImageDBSave
+namespace ImageDBSave 
 {
-    class AppCommands
+    class AppCommands 
     {
+
 
         //load
 
-        public void ImageLoaded()
+        public void ImageLoaded(Action<string> mes)
         {
-            //string filename = @"TestSource\587bcd241466d.jpg"; //путь к файлу
-            //string filetitle = "кот"; //Название файла
-            //string shortFileName = filename.Substring(filename.LastIndexOf('\\') + 1); //короткое имя для сохранения
-            //byte[] imageData;
-            //using (System.IO.FileStream fs = new System.IO.FileStream(filename, System.IO.FileMode.Open))
-            //{
-            //    imageData = new byte[fs.Length];
-            //    fs.Read(imageData, 0, imageData.Length);
-            //}
-            MessageBox.Show("Функция находится в разработке.");
+            string filename = @"TestSource\587bcd241466d.jpg"; //путь к файлу
+            string filetitle = "кот"; //Название файла
+            string shortFileName = filename.Substring(filename.LastIndexOf('\\') + 1); //короткое имя для сохранения
+            byte[] imageData;
+            using (System.IO.FileStream fs = new System.IO.FileStream(filename, System.IO.FileMode.Open))
+            {
+                imageData = new byte[fs.Length];
+                fs.Read(imageData, 0, imageData.Length);
+            }
+            mes("Функция находится в разработке.");
         }
 
         //search
 
-        public void ImageSearch()
+        public void ImageSearch(Action<string> mes/*, Action<string> vis*/)
         {
-            //MessageBox.Show("Функция находится в разработке.");
-            //btStartedMain.Visibility = Visibility.Visible;
+            mes("Функция находится в разработке.");
+            //vis("= Visibility.Visible");
         }
         
 

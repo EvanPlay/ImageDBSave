@@ -10,7 +10,7 @@ namespace ImageDBSave.DB
     public class MyContext : DbContext
     {
         private string ConnectionString =
-            "server=***; database=***; user=***; password=***; timeout=30;";
+            "server=192.168.59.93; database=***; user=***; password=***; timeout=30;";
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
