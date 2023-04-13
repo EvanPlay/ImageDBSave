@@ -45,8 +45,6 @@ namespace ImageDBSave
             {
                 string UserStatus = tbUserName.Text;
                 new MainWindow(UserStatus).Show();
-                //MainWindow mainWindow = new(UserStatus);
-                //mainWindow.ShowDialog();
                 Close();
             }
             else
@@ -57,8 +55,6 @@ namespace ImageDBSave
                     {
                         string UserStatus = tbUserName.Text;
                         new MainWindow(UserStatus).Show();
-                        //MainWindow mainWindow = new(UserStatus);
-                        //mainWindow.ShowDialog();
                         Close();
                     }
                     else

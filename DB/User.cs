@@ -11,9 +11,12 @@ namespace ImageDBSave.DB
     {
         [Key]
         public int UserId { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; } = ""; //Тестовое значение
         public string Password { get; set; }
         public string Login { get; set; }
-        public string UserImage { get;set; }
+        public string UserImage { get; set; } = ""; //Тестовое значение
+        public string StatusUser { get; set; }
+
+        public override string ToString() => $"{Name}{StatusUser}";
     }
 }

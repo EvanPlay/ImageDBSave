@@ -13,11 +13,11 @@ namespace ImageDBSave
 
         //load
 
-        public void ImageLoaded(Action<string> mes)
+        public void ImageLoaded(/*Action<string> mes,*/ Action<string> filetitle)
         {
-            
+
             string filename = @"TestSource\587bcd241466d.jpg"; //путь к файлу
-            string filetitle = "кот"; //Название файла
+            //string filetitle = "кот"; //Название файла
             string shortFileName = filename.Substring(filename.LastIndexOf('\\') + 1); //короткое имя для сохранения
             byte[] imageData;
             using (System.IO.FileStream fs = new System.IO.FileStream(filename, System.IO.FileMode.Open))
@@ -25,7 +25,8 @@ namespace ImageDBSave
                 imageData = new byte[fs.Length];
                 fs.Read(imageData, 0, imageData.Length);
             }
-            mes("Функция находится в разработке.");
+            //mes("Функция находится в разработке.");
+            filetitle("Кот");
         }
 
         //search

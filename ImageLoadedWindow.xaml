@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ImageDBSave"
         mc:Ignorable="d"
-        Title="ImageLoadedWindow" Height="450" Width="450"
-        MinHeight="450" MinWidth="450"
+        Title="ImageLoadedWindow" Height="270" Width="450"
+        MinHeight="270" MinWidth="450"
         WindowStartupLocation="CenterScreen"
         AllowsTransparency="False"
         Background="Transparent"
@@ -14,19 +14,33 @@
     
     <Border Style="{StaticResource BackgraundStyle}">
 
-        <Grid>
+        <Grid Margin="10">
 
-            <StackPanel>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Grid.Column="0">
 
-                <Label Content="Назваение файла:"/>
-                
-                <TextBox/>
+                <StackPanel Orientation="Horizontal">
+
+                    <Label Content="Файл загружен"/>
+
+                    <Label Name="lUserStatus"/>
+
+                </StackPanel>
+
+                <Label Content="Назваение файла: "/>
+
+                <TextBox x:Name="tbFileName"/>
 
                 <Label Content="Доступ к загруженному изображению:"/>
-                
-                <ListBox/>
 
-                <ListBox/>
+                <ComboBox x:Name="cbAccess"
+                          SelectionChanged="cbAccess_SelectionChanged"/>
+
+                <ComboBox x:Name="cbCorrectAccess"/>
 
                 <Label Content="Размер файла: "/>
 
@@ -35,6 +49,39 @@
                 <Label Content="Формат файла изображения: "/>
 
             </StackPanel>
+
+            <Border Grid.Column="1">
+
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel HorizontalAlignment="Right"
+                                Grid.Row="1"
+                            VerticalAlignment="Bottom"
+                            Orientation="Horizontal">
+
+
+                        <Button Name="btBack" Content="Отмена" Margin="5"
+                                Click="btBack_Click"/>
+                        <Button Name="btDownlodead" Content="Загрузка" Margin="5"
+                                Click="btDownlodead_Click"/>
+
+                    </StackPanel>
+
+                    <Border Grid.Column="1" BorderBrush="Black"
+                    BorderThickness="3" Margin="10">
+
+                        <Frame Name="fImageLoaded"/>
+
+                    </Border>
+
+                </Grid>
+
+            </Border>
 
         </Grid>
         

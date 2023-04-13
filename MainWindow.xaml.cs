@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ImageDBSave.DB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,7 @@ namespace ImageDBSave
         {
 
             InitializeComponent();
+            
             Loaded += MainWindow_Loaded;
             btStartedMain.Visibility = Visibility.Collapsed;
 
@@ -39,6 +41,8 @@ namespace ImageDBSave
                 cbIncogniton.Visibility = Visibility.Visible;
                 btEnter.Visibility = Visibility.Collapsed;
             }
+
+            
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -62,8 +66,11 @@ namespace ImageDBSave
 
         private void btImageLoaded_Click(object sender, RoutedEventArgs e)
         {
-            AppCommands appCommands = new();
-            appCommands.ImageLoaded((x)=>MessageBox.Show(x));
+            string testFileName = "Кот";//Тестовое значение
+            string UserStatus = "Test";
+            new ImageLoadedWindow(UserStatus, testFileName).ShowDialog();
+            //AppCommands appCommands = new();
+            //appCommands.ImageLoaded((x)=>MessageBox.Show(x));
 
         }
 
